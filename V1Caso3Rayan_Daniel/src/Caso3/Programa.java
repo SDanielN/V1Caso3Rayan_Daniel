@@ -35,6 +35,20 @@ public class Programa {
 		double alturaCIlindro = entrada.nextInt();
 
 		System.out.println("El area del cilindro es de " + calcularArea(radioCilindro, alturaCIlindro));
+		
+		  // Solicitar al usuario que ingrese la base del rectángulo
+        System.out.print("Ingrese la base del rectángulo: ");
+        double baseRec = entrada.nextDouble();
+
+        // Solicitar al usuario que ingrese la altura del rectángulo
+        System.out.print("Ingrese la altura del rectángulo: ");
+        double alturaRec = entrada.nextDouble();
+
+        // Calcular el área del rectángulo
+        double areaRec = calcularAreaRectangulo(baseRec, alturaRec);
+
+        // Mostrar el resultado
+        System.out.println("Área del rectángulo: " + area);
 
 	}
 
@@ -60,4 +74,8 @@ public class Programa {
 		double area = 2 * 3.14 * radio * (radio + altura);
 		return area;
 	}
+	 // Función para calcular el área del rectángulo
+    public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
+        return baseRec * alturaRec;
+    }
 }
