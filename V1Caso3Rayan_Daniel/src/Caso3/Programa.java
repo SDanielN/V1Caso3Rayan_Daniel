@@ -50,6 +50,17 @@ public class Programa {
         // Mostrar el resultado
         System.out.println("Área del rectángulo: " + area);
 
+        // Solicitar al usuario que ingrese la longitud de un lado del cubo
+        System.out.print("Ingrese la longitud de un lado del cubo: ");
+        double ladoCubo = entrada.nextDouble();
+
+        // Calcular el área del cubo
+        double areaCubo = calcularAreaCubo(ladoCubo);
+
+        // Mostrar el resultado
+        System.out.println("Área del cubo: " + areaCubo);
+
+
 	}
 
 	// Calculamos el área del triangulo
@@ -77,5 +88,8 @@ public class Programa {
 	 // Función para calcular el área del rectángulo
     public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
         return baseRec * alturaRec;
+    }
+    public static double calcularAreaCubo(double ladoCubo) {
+        return 6 * Math.pow(ladoCubo, 2);
     }
 }
