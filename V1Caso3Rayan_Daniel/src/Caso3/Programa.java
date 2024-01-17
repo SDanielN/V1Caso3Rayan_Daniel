@@ -29,10 +29,10 @@ public class Programa {
 
 		// Pedimos los datos del cilindro
 		System.out.println("Escribe el radio del cilindro: ");
-		double radioCilindro = entrada.nextInt();
+		double radioCilindro = entrada.nextDouble();
 
 		System.out.println("Escribe la altura del cilindro: ");
-		double alturaCIlindro = entrada.nextInt();
+		double alturaCIlindro = entrada.nextDouble();
 
 		System.out.println("El area del cilindro es de " + calcularArea(radioCilindro, alturaCIlindro));
 
@@ -49,13 +49,11 @@ public class Programa {
 
 		// Mostrar el resultado
 		System.out.println("Área del rectángulo: " + area);
-
-		// Pedimos los datos del cubo
-		System.out.println("Escribe el lado del cubo: ");
-		double ladoCubo = entrada.nextInt();
-
-		System.out.println("El area del cubo es de " + calcularAreaCubo(ladoCubo));
-
+		
+		System.out.println("Ingrese el primer lado del cubo: ");
+		double lado1Cu = entrada.nextDouble();
+		System.out.println("Volumen del cubo: " + volumenCubo(lado1Cu));
+		
 	}
 
 	// Calculamos el área del triangulo
@@ -85,11 +83,10 @@ public class Programa {
 	public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
 		return baseRec * alturaRec;
 	}
-
-	// Calculamos el área del cubo - Alumno2
-	public static double calcularAreaCubo(double lado) {
-		double areaCara = lado * lado;
-		double areaCubo = areaCara * 6;
-		return areaCubo;
+	
+	public static double volumenCubo(double lado1Cu) {
+		return lado1Cu*lado1Cu*lado1Cu;
 	}
+	
+
 }
