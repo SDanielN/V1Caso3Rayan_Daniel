@@ -29,38 +29,31 @@ public class Programa {
 
 		// Pedimos los datos del cilindro
 		System.out.println("Escribe el radio del cilindro: ");
-		double radioCilindro = entrada.nextInt();
+		double radioCilindro = entrada.nextDouble();
 
 		System.out.println("Escribe la altura del cilindro: ");
-		double alturaCIlindro = entrada.nextInt();
+		double alturaCIlindro = entrada.nextDouble();
 
 		System.out.println("El area del cilindro es de " + calcularArea(radioCilindro, alturaCIlindro));
+
+		// Solicitar al usuario que ingrese la base del rectángulo
+		System.out.print("Ingrese la base del rectángulo: ");
+		double baseRec = entrada.nextDouble();
+
+		// Solicitar al usuario que ingrese la altura del rectángulo
+		System.out.print("Ingrese la altura del rectángulo: ");
+		double alturaRec = entrada.nextDouble();
+
+		// Calcular el área del rectángulo
+		double areaRec = calcularAreaRectangulo(baseRec, alturaRec);
+
+		// Mostrar el resultado
+		System.out.println("Área del rectángulo: " + area);
 		
-		  // Solicitar al usuario que ingrese la base del rectángulo
-        System.out.print("Ingrese la base del rectángulo: ");
-        double baseRec = entrada.nextDouble();
-
-        // Solicitar al usuario que ingrese la altura del rectángulo
-        System.out.print("Ingrese la altura del rectángulo: ");
-        double alturaRec = entrada.nextDouble();
-
-        // Calcular el área del rectángulo
-        double areaRec = calcularAreaRectangulo(baseRec, alturaRec);
-
-        // Mostrar el resultado
-        System.out.println("Área del rectángulo: " + area);
-
-        // Solicitar al usuario que ingrese la longitud de un lado del cubo
-        System.out.print("Ingrese la longitud de un lado del cubo: ");
-        double ladoCubo = entrada.nextDouble();
-
-        // Calcular el área del cubo
-        double areaCubo = calcularAreaCubo(ladoCubo);
-
-        // Mostrar el resultado
-        System.out.println("Área del cubo: " + areaCubo);
-
-
+		System.out.println("Ingrese el primer lado del cubo: ");
+		double lado1Cu = entrada.nextDouble();
+		System.out.println("Volumen del cubo: " + volumenCubo(lado1Cu));
+		
 	}
 
 	// Calculamos el área del triangulo
@@ -85,11 +78,15 @@ public class Programa {
 		double area = 2 * 3.14 * radio * (radio + altura);
 		return area;
 	}
-	 // Función para calcular el área del rectángulo
-    public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
-        return baseRec * alturaRec;
-    }
-    public static double calcularAreaCubo(double ladoCubo) {
-        return 6 * Math.pow(ladoCubo, 2);
-    }
+
+	// Función para calcular el área del rectángulo
+	public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
+		return baseRec * alturaRec;
+	}
+	
+	public static double volumenCubo(double lado1Cu) {
+		return lado1Cu*lado1Cu*lado1Cu;
+	}
+	
+
 }
