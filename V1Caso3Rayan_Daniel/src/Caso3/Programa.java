@@ -50,10 +50,6 @@ public class Programa {
 		// Mostrar el resultado
 		System.out.println("Área del rectángulo: " + area);
 		
-		System.out.println("Ingrese el primer lado del cubo: ");
-		double lado1Cu = entrada.nextDouble();
-		System.out.println("Volumen del cubo: " + volumenCubo(lado1Cu));
-		
 	}
 
 	// Calculamos el área del triangulo
@@ -84,9 +80,6 @@ public class Programa {
 		return baseRec * alturaRec;
 	}
 	
-	public static double volumenCubo(double lado1Cu) {
-		return lado1Cu*lado1Cu*lado1Cu;
-	}
 	
 
 }
