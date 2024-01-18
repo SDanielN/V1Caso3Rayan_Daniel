@@ -60,7 +60,8 @@ public class Programa {
         // Mostrar el resultado
         System.out.println("Área del cubo: " + areaCubo);
 
-
+		    // Mostrar el resultado
+		    System.out.println("Área del rectángulo: " + area);
 	}
 
 	// Calculamos el área del triangulo
@@ -85,11 +86,16 @@ public class Programa {
 		double area = 2 * 3.14 * radio * (radio + altura);
 		return area;
 	}
-	 // Función para calcular el área del rectángulo
-    public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
-        return baseRec * alturaRec;
-    }
-    public static double calcularAreaCubo(double ladoCubo) {
-        return 6 * Math.pow(ladoCubo, 2);
-    }
+	// Función para calcular el área del rectángulo
+  public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
+    return baseRec * alturaRec;
+  }
+  public static double calcularAreaCubo(double ladoCubo) {
+    return 6 * Math.pow(ladoCubo, 2);
+  }
+
+	// Función para calcular el área del rectángulo
+	public static double calcularAreaRectangulo(double baseRec, double alturaRec) {
+		return baseRec * alturaRec;
+	}
 }
